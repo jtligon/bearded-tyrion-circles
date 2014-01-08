@@ -1,3 +1,5 @@
+#!/bin/sh
+
 if [ `which composite | grep -c "composite"` != 0 ]
 then
 composite=`which composite`

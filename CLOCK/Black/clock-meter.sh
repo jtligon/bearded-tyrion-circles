@@ -1,3 +1,5 @@
+#!/bin/sh
+
 analog=`cat ~/Documents/CIRCLE/CONFIG | grep 'CLOCK_DIGITAL' | tail -n1 | awk '{print $2}'`
 if [ `which convert | grep -c "convert"` != 0 ]
 then

@@ -1,3 +1,5 @@
+#!/bin/sh
+
 ring_col=`echo Orange`
 if [ `which convert | grep -c "convert"` != 0 ]
 then

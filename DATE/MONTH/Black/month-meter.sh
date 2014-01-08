@@ -1,3 +1,5 @@
+#!/bin/sh
+
 if [ `which convert | grep -c "convert"` != 0 ]
 then
 convert=`which convert`
