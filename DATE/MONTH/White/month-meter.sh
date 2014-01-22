@@ -1,11 +1,7 @@
 #!/bin/sh
 
-if [ `which convert | grep -c "convert"` != 0 ]
-then
-convert=`which convert`
-else
-convert=`cat ~/Documents/CIRCLE/CONFIG | grep 'CONVERT_PATH' | tail -n1 | awk '{print $2}'`;
-fi
+convert=`echo /usr/local/bin/convert`
+
 ring_col=`echo White`
 meter_col=`echo White`
 out=`echo  /tmp/month-ring.png`

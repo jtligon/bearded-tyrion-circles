@@ -1,11 +1,6 @@
 #!/bin/sh
 
-if [ `which convert | grep -c "convert"` != 0 ]
-then
-convert=`which convert`
-else
-convert=`cat ~/Documents/CIRCLE/CONFIG | grep 'CONVERT_PATH' | tail -n1 | awk '{print $2}'`;
-fi
+convert=`echo /usr/local/bin/convert`
 ring_col=`cat ~/Documents/CIRCLE/CONFIG | grep 'WEATHER_ICON_RING_COLOR' | tail -n1 | awk '{print $2}'`
 icon_col=`cat ~/Documents/CIRCLE/CONFIG | grep 'WEATHER_ICON_COLOR' | tail -n1 | awk '{print $2}'`
 c=`cat ~/Documents/CIRCLE/CONFIG | grep 'WEATHER_CODE' | tail -n1 | awk '{print $2}'`;

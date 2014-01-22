@@ -1,12 +1,6 @@
 #!/bin/sh
-
-if [ `which convert | grep -c "convert"` != 0 ]
-then
-convert=`which convert`
-else
-convert=`cat ~/Documents/CIRCLE/CONFIG | grep 'CONVERT_PATH' | tail -n1 | awk '{print $2}'`;
-fi
-out=`echo  /tmp/clock-ring.png` 
+convert=`echo /usr/local/bin/convert`
+out=~/Documents/CIRCLE/CLOCK/White/clock-ring.png 
 ring_col=`echo white`
 s_meter_col=`echo white`
 m_meter_col=`echo white`
@@ -39,7 +33,6 @@ else
 fi
 
 x=`date +"%k:%M:%S";`
-
 echo "\033[1;37m${x}\033[0m\c"
 printf " "
 

@@ -1,11 +1,7 @@
 #!/bin/sh
 
-if [ `which convert | grep -c "convert"` != 0 ]
-then
-convert=`which convert`
-else
-convert=`cat ~/Documents/CIRCLE/CONFIG | grep 'CONVERT_PATH' | tail -n1 | awk '{print $2}'`;
-fi
+convert=`echo /usr/local/bin/convert`
+
 theme=`cat ~/Documents/CIRCLE/CONFIG | grep 'BATT_THEME' | tail -n1 | awk '{print $2}'`
 ring_col=White
 meter_col_1=green

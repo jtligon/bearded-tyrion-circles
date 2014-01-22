@@ -2,7 +2,7 @@
 
 ring_col=`echo White`
 
-convert=`which convert`
+convert=`echo /usr/local/bin/convert`
 
 c=`cat ~/Documents/CIRCLE/CONFIG | grep 'WEATHER_CODE' | tail -n1 | awk '{print $2}'`;
 
