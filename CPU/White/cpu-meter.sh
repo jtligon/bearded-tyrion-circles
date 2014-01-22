@@ -6,7 +6,7 @@ ring_col=white
 meter_col=white
 out=/tmp/cpu-ring.png
 
-myCPU=`top -l 1 | awk '/CPU usage/ {print $3}' | sed s/%//`
+myCPU=`top -l 1 | awk '/CPU usage/ {print $3 + $5}' | sed s/%//`
 myCPU=`echo "tmp=$myCPU; tmp /= 1; tmp" | bc`
 
 typeset -i b=9
